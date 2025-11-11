@@ -10,4 +10,4 @@
 
 
 -- select distinct email from Person;
- delete from Person P1 where P1.id not in (select * from (select min(id) from Person P2 group by P2.email) as sub );
+ delete from Person P1 where P1.id not in (select * from (select min(id) from Person P2 group by P2.email) as v );
